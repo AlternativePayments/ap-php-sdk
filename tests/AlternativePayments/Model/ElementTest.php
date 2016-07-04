@@ -47,8 +47,4 @@ class ElementTest extends PHPUnit_Framework_TestCase {
         $this->assertTrue($this->testEl->getUpdated() == $this->testDate);
     }    
     
-    public function testVersion(){
-        $this->assertTrue($this->testEl->getVersion() != NULL);
-    }
-
 }

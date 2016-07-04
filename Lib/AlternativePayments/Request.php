@@ -154,6 +154,7 @@ class Request
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_HTTPHEADER, array(
             'Content-Type: application/json',
+            'User-Agent: AlternativePayments PHP SDK v0.1.0',
             'Content-Length: ' . strlen($param),
             'Authorization: Basic ' . $encodedKey
             )
