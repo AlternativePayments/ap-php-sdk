@@ -33,16 +33,6 @@ class Refund extends Element
     /*
      * @var string
      */
-    protected $acquiringAccountInfo;
-
-    /*
-     * @var bool
-     */
-    protected $isFromAdminTool;
-
-    /*
-     * @var string
-     */
     protected $requestIp;
 
     /*
@@ -116,36 +106,6 @@ class Refund extends Element
     public function setCretaed($created)
     {
         $this->created = $created;
-    }
-
-    /*
-     * @return string
-     */
-    public function getAcquiringAccountInfo()
-    {
-        return $this->acquiringAccountInfo;
-    }
-    /*
-     * @param string
-     */
-    public function setAcquiringAccountInfo($acquiringAccountInfo)
-    {
-        $this->acquiringAccountInfo = $acquiringAccountInfo;
-    }
-
-    /*
-     * @return bool
-     */
-    public function getIsFromAdminTool()
-    {
-        return $this->isFromAdminTool;
-    }
-    /*
-     * @param bool
-     */
-    public function setIsFromAdminTool($isFromAdminTool)
-    {
-        $this->isFromAdminTool = $isFromAdminTool;
     }
 
     /*

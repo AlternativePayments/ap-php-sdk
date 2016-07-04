@@ -24,27 +24,6 @@ abstract class Element
     protected $updated;
 
     /*
-     * @var string
-     */
-    protected $version;
-
-    /*
-     * @return string
-     */
-    public function __construct()
-    {
-        $this->version = "1.0.0";
-    }
-
-    /*
-     * @return string
-     */
-    public function getVersion()
-    {
-        return $this->version;
-    }
-
-    /*
      * @return string
      */
     public function getId()

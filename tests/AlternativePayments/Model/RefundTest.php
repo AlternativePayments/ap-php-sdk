@@ -17,8 +17,6 @@ class RefundTest extends PHPUnit_Framework_TestCase {
     private $testReason;
     private $testOriginalTransactionCode;
     private $testCreateDate;
-    private $testIsFromAdminTool;
-    private $testAcquiringAccountInfo;
     
     private function SetTestValues(){
         $this->testId = "testcodevalue12345";
@@ -27,8 +25,6 @@ class RefundTest extends PHPUnit_Framework_TestCase {
         $this->testReason = "Some Test Reason";
         $this->testOriginalTransactionCode = "sometestoriginaltransactioncode123";
         $this->testCreateDate = new DateTime('2014-01-01 00:00:00');
-        $this->testIsFromAdminTool = true;
-        $this->testAcquiringAccountInfo = "test acquiring account info;";
     }
         
     private function InitTests(){       
@@ -38,8 +34,6 @@ class RefundTest extends PHPUnit_Framework_TestCase {
         $this->testRefund->setCurrency($this->testCurrency);
         $this->testRefund->setOriginalTransactionCode($this->testOriginalTransactionCode);
         $this->testRefund->setCretaed($this->testCreateDate);
-        $this->testRefund->setIsFromAdminTool($this->testIsFromAdminTool);
-        $this->testRefund->setAcquiringAccountInfo($this->testAcquiringAccountInfo);
     }
     
     public function SetUp(){        
@@ -67,10 +61,6 @@ class RefundTest extends PHPUnit_Framework_TestCase {
         $this->assertTrue($this->testRefund->getCreated() == $this->testCreateDate);
     }
     
-    public function testIsFromAdminTool() {
-        $this->assertTrue($this->testRefund->getIsFromAdminTool() == $this->testIsFromAdminTool);
-    } 
-    
     public function testReason(){
         $this->testRefund->setReason(ReturnReason::CHARGEBACK_AVOIDANCE);
         $this->assertTrue($this->testRefund->getReason() == "CHARGEBACK_AVOIDANCE");
@@ -88,7 +78,4 @@ class RefundTest extends PHPUnit_Framework_TestCase {
         $this->assertTrue($this->testRefund->getReason() == "UNSATISFIED_CUSTOMER");
     } 
     
-    public function testAcquiringAccount(){
-        $this->assertTrue($this->testRefund->getAcquiringAccountInfo() == $this->testAcquiringAccountInfo);
-    }
 }
