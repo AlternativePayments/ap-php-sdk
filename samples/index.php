@@ -4,7 +4,7 @@ require_once '../vendor/autoload.php';
 
 use AlternativePayments\Config;
 Config :: setApiKey("rHErfc0m7n9GKFMNFSfNuO1QM7lFhCEh3mv0MKGR");
-Config :: setApiUrl("http://ciapi.alternativepayments.com:8787/api");
+Config :: setApiUrl("https://api.alternativepayments.com/api");
 
 ?>
 <html>
