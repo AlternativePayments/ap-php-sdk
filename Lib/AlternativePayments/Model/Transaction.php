@@ -48,12 +48,22 @@ class Transaction extends Element
     /*
      * @var string
      */
-    protected $iPAddress;
+    protected $ipAddress;
     
     /**
      * @var \AlternativePayments\Model\RedirectUrls
      */
     protected $redirectUrls;
+    
+    /*
+     * @var boolean
+     */
+    protected $isRecurring;
+    
+    /*
+     * @var string
+     */
+    protected $initialTransactionId;
     
      /*
      * @return \AlternativePayments\Model\Customer
@@ -199,17 +209,17 @@ class Transaction extends Element
     /*
      * @param string
      */
-    public function setIPAddress($iPAddress)
+    public function setIpAddress($ipAddress)
     {
-        $this->iPAddress = $iPAddress;
+        $this->ipAddress = $ipAddress;
     }
     
     /*
      * @return string
      */
-    public function getIPAddress()
+    public function getIpAddress()
     {
-        return $this->iPAddress;
+        return $this->ipAddress;
     }
     
     /*
@@ -227,4 +237,38 @@ class Transaction extends Element
     {
         $this->redirectUrls = $redirectUrls;
     }
+    
+    /*
+     * @return boolean
+     */
+    public function getIsRecurring()
+    {
+        return $this->isRecurring;
+    }
+    
+    /*
+     * @return string
+     */
+    public function getInitialTransactionId()
+    {
+        return $this->initialTransactionId;
+    }
+    
+    /*
+     * @param string
+     */
+    public function setIsRecurring($isRecurring)
+    {
+        $this->isRecurring = $isRecurring;
+    }
+    
+    /*
+     * @param string
+     */
+    public function setInitialTransactionId($initialTransactionId)
+    {
+        $this->initialTransactionId = $initialTransactionId;
+    }
+
+
 }
