@@ -27,7 +27,7 @@ To use Alternative Payments PHP SDK you need to setup your secret integration ke
 use AlternativePayments\Config;
 Config :: setApiKey("sk_test_rHErfsdjgfk9.....lFbfdsgh3mv0M");
 ```
-Create SEPA transaction request example:
+SEPA transaction request example:
 ```
 require_once '../vendor/autoload.php';
 
