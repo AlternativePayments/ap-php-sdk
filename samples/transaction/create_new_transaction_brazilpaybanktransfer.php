@@ -1,22 +1,22 @@
 <?php
 
 $customer = new \AlternativePayments\Model\Customer();
-$customer->setEmail("larissa.santos@example.com");
+$customer->setEmail("Roberto@Doe.com");
 $customer->setCountry("BR");
-$customer->setFirstName("Larissa");
-$customer->setLastName("Santos Souza");
-$customer->setAddress("Rua Padre Olivério Kraemer");
-$customer->setAddress2("1148");
-$customer->setCity("Rio de Janeiro");
-$customer->setState("RJ");
-$customer->setZip("20541-270");
-$customer->setPhone("(21) 5336-9131");
-$customer->setBirthDate("12/12/1965");
+$customer->setFirstName("Roberto");
+$customer->setLastName("Doe");
+$customer->setAddress("Av Max Teixeira");
+$customer->setAddress2("1040");
+$customer->setCity("Manaus");
+$customer->setState("AM");
+$customer->setZip("69050-240");
+$customer->setPhone("+55AA71111");
+$customer->setBirthDate("13/05/1974");
 
 $payment = new \AlternativePayments\Model\Payment();
 $payment->setPaymentOption("BrazilPayBankTransfer");
-$payment->setHolder("Larissa Santos Souza");
-$payment->setDocumentId("252.243.166-85");
+$payment->setHolder("Roberto Doe");
+$payment->setDocumentId("924.521.873-24");
 $payment->setBankCode("hsbc");
 
 $transaction = new \AlternativePayments\Model\Transaction();

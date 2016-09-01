@@ -39,7 +39,12 @@ class Transaction extends Element
      * @var string
      */
     protected $merchantPassThruData;
-
+	
+	/*
+     * @var string
+     */
+    protected $merchantTransactionId;
+	
     /*
      * @var string
      */
@@ -189,7 +194,22 @@ class Transaction extends Element
     {
         return $this->merchantPassThruData;
     }
-
+	
+	/*
+     * @param string
+     */
+    public function setMerchantTransactionId($merchantTransactionId)
+    {
+        $this->merchantTransactionId = $merchantTransactionId;
+    }
+    /*
+     * @return string
+     */
+    public function getMerchantTransactionId()
+    {
+        return $this->merchantTransactionId;
+    }
+	
     /*
      * @param string
      */
