@@ -16,7 +16,7 @@ class Config
         self::$apiKey = $apiKey;
     }
     
-    private static $apiUrl = 'https://api.alternaativepayments.com/api';
+    private static $apiUrl = 'https://api.alternativepayments.com/api';
     
     public static function getApiUrl()
     {
