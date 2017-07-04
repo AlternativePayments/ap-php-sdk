@@ -3,7 +3,7 @@
 require_once '../vendor/autoload.php';
 
 use AlternativePayments\Config;
-Config :: setApiKey("sk_test_6JUp47GK9lWJ7bSZvDC1UBgFIv2aWhQHVUCRl9Xv");
+Config :: setApiKey("sk_test_6JUp47GK9lWJ7bSZvDC1UBgFIv2aWxxxxx");
 Config :: setApiUrl("https://api.alternativepayments.com/api");
 
 ?>

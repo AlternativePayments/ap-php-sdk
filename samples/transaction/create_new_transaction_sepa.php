@@ -9,7 +9,7 @@ $customer->setLastName("Doe");
 $payment = new \AlternativePayments\Model\Payment();
 $payment->setPaymentOption("SEPA");
 $payment->setHolder("John Doe");
-$payment->setIBAN("DE89370400440532013000");
+$payment->setIBAN("DE89370400440xxxxxx");
 
 $phoneVerification = new \AlternativePayments\Model\TokenSms();
 $phoneVerification->setToken("cac2fc997f5348f19e967d6e2cc3ec28");

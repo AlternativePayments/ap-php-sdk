@@ -39,6 +39,7 @@ class Payment extends Element
      * @var string
      */
     protected $creditCardNumber;
+    
     /*
      * @var string
      */
@@ -48,6 +49,7 @@ class Payment extends Element
      * @var string
      */
     protected $expirationYear;
+    
     /*
      * @var string
      */
@@ -57,10 +59,12 @@ class Payment extends Element
      * @var string
      */
     protected $documentId;
+    
     /*
      * @var string
      */
     protected $creditCardType;
+    
     /*
      * @var string
      */
@@ -105,6 +109,7 @@ class Payment extends Element
     {
         return $this->paymentOption;
     }
+    
     /*
      * @param string
      */
@@ -112,6 +117,7 @@ class Payment extends Element
     {
         $this->paymentOption = $paymentOption;
     }
+    
     /*
      * @return string
      */
@@ -119,6 +125,7 @@ class Payment extends Element
     {
         return $this->holder;
     }
+    
     /*
      * @param string
      */
@@ -126,6 +133,7 @@ class Payment extends Element
     {
         $this->holder = $holder;
     }
+    
     /*
      * @return string
      */
@@ -133,6 +141,7 @@ class Payment extends Element
     {
         return $this->IBAN;
     }
+    
     /*
      * @param string
      */
@@ -212,6 +221,7 @@ class Payment extends Element
     {
         $this->expirationYear = $expirationYear;
     }
+    
     /*
      * @param string
      */
@@ -219,13 +229,15 @@ class Payment extends Element
     {
         $this->creditCardType = $creditCardType;
     }
+    
     /*
      * @param string
      */
-    public function getCreditCardType($creditCardType)
+    public function getCreditCardType()
     {
         return $this->creditCardType;
     }
+    
     /*
      * @param string
      */
