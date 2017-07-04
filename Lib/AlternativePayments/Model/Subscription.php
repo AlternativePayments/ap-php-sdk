@@ -19,6 +19,11 @@ class Subscription extends Element
      * @var string
      */
     protected $paymentId;
+    
+    /*
+     * @var string
+     */
+    protected $ipAddress;
 
     /*
      * @return string
@@ -27,6 +32,7 @@ class Subscription extends Element
     {
         return $this->planId;
     }
+    
     /*
      * @param string
      */
@@ -42,6 +48,7 @@ class Subscription extends Element
     {
         return $this->customerId;
     }
+    
     /*
      * @param string
      */
@@ -57,11 +64,28 @@ class Subscription extends Element
     {
         return $this->paymentId;
     }
+    
     /*
      * @param string
      */
     public function setPaymentId($paymentId)
     {
         $this->paymentId = $paymentId;
+    }
+    
+    /*
+     * @param string
+     */
+    public function getIPAddress()
+    {
+        return $this->ipAddress;
+    }
+    
+    /*
+     * @param string
+     */
+    public function setIPAddress($ipAddress)
+    {
+        $this->ipAddress = $ipAddress;
     }
 }

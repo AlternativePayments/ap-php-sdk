@@ -48,6 +48,7 @@ class Void extends Element
     {
         return $this->currency;
     }
+    
     /*
      * @param string
      */

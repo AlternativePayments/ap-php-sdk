@@ -3,7 +3,7 @@
 namespace AlternativePayments\Model;
 
 /**
- * Abstract Model class inherented by all model classes
+ * Abstract Model class inherited by all model classes
  */
 abstract class Element
 {

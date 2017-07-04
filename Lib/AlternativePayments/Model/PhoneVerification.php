@@ -4,44 +4,45 @@ namespace AlternativePayments\Model;
 
 class PhoneVerification extends Element
 {
-
     /*
      * @var string
      */
-    protected $pin;
-
+    protected $phone;
+    
     /*
      * @var string
      */
-    protected $token;
+    protected $key;
 
     /*
      * @return string
      */
-    public function getPin()
+    public function getPhone()
     {
-        return $this->pin;
+        return $this->phone;
     }
+    
     /*
-     * @param string
+     * @var string
      */
-    public function setPin($pin)
+    public function setPhone($phone)
     {
-        $this->pin = $pin;
+        $this->phone = $phone;
     }
-
+     
     /*
-     * @return string
+     * @var string
      */
-    public function getToken()
+    public function getKey()
     {
-        return $this->token;
+        return $this->key;
     }
+    
     /*
-     * @param string
+     * @var string
      */
-    public function setToken($token)
+    public function setKey($key)
     {
-        $this->token = $token;
+        $this->key = $key;
     }
 }

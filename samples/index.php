@@ -3,7 +3,7 @@
 require_once '../vendor/autoload.php';
 
 use AlternativePayments\Config;
-Config :: setApiKey("rHErfc0m7n9GKFMNFSfNuO1QM7lFhCEh3mv0MKGR");
+Config :: setApiKey("sk_test_6JUp47GK9lWJ7bSZvDC1UBgFIv2aWhQHVUCRl9Xv");
 Config :: setApiUrl("https://api.alternativepayments.com/api");
 
 ?>
@@ -24,25 +24,51 @@ Config :: setApiUrl("https://api.alternativepayments.com/api");
             <tr>
                 <td><table>
                         <tr>
-                            <td><a href="index.php?option=transaction&action=create_new_transaction_sepa">Add SEPA transaction</a></td></tr>
+                            <td><a href="index.php?option=transaction&action=create_new_sms_pin">Create SMS PIN</a></td></tr>
                         <tr>
-                            <td><a href="index.php?option=transaction&action=create_new_transaction_brazilpayboleto">Add BrazilPayBoleto transaction</a></td></tr>
+                            <td><a href="index.php?option=transaction&action=create_new_plan_sepa">Create Plan SEPA</a></td></tr>
                         <tr>
-                            <td><a href="index.php?option=transaction&action=create_new_transaction_brazilpaybanktransfer">Add BrazilPayBankTransfer transaction</a></td></tr>
+                            <td><a href="index.php?option=transaction&action=create_new_subscription_sepa">Create Subscription SEPA</a></td></tr>
                         <tr>
-                            <td><a href="index.php?option=transaction&action=create_new_transaction_teleingreso">Add Teleingreso transaction</a></td></tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_sepa">Create SEPA transaction</a></td></tr>
                         <tr>
-                            <td><a href="index.php?option=transaction&action=create_new_transaction_safetypay">Add SafetyPay transaction</a></td></tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_brazilpayboleto">Create BrazilPayBoleto transaction</a></td></tr>
                         <tr>
-                            <td><a href="index.php?option=transaction&action=create_new_transaction_poli">Add POLi transaction</a></td></tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_brazilpaybanktransfer">Create BrazilPayBankTransfer transaction</a></td></tr>
                         <tr>
-                            <td><a href="index.php?option=transaction&action=create_new_transaction_ideal">Add IDEAL transaction</a></td></tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_brazilpaychargecard">Create BrazilPayChargeCard transaction</a></td></tr>
                         <tr>
-                            <td><a href="index.php?option=transaction&action=create_new_transaction_trustpay">Add TrustPay transaction</a></td></tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_cashu">Create Cashu transaction</a></td></tr>
                         <tr>
-                            <td><a href="index.php?option=transaction&action=create_new_transaction_mistercash">Add MisterCash transaction</a></td></tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_teleingreso">Create Teleingreso transaction</a></td></tr>
                         <tr>
-                            <td><a href="index.php?option=transaction&action=create_new_transaction_przelewy24">Add Przelewy24 transaction</a></td></tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_safetypay">Create SafetyPay transaction</a></td></tr>
+                        <tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_sofort">Create Sofort transaction</a></td></tr>
+                        <tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_paysafe">Create PaySafe transaction</a></td></tr>
+                        <tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_alipay">Create AliPay transaction</a></td></tr>
+                        <tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_tenpay">Create TenPay transaction</a></td></tr>
+                        <tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_unionpay">Create UnionPay transaction</a></td></tr>
+                        <tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_eps">Create EPS transaction</a></td></tr>
+                        <tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_verkkopankki">Create Verkkopankki transaction</a></td></tr>
+                        <tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_poli">Create POLi transaction</a></td></tr>
+                        <tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_ideal">Create IDEAL transaction</a></td></tr>
+                        <tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_trustpay">Create TrustPay transaction</a></td></tr>
+                        <tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_bancontact">Create BanContact transaction</a></td></tr>
+                        <tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_przelewy24">Create Przelewy24 transaction</a></td></tr>
+                        <tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_qiwi">Create Qiwi transaction</a></td></tr>
                     </table></td>
                 <td><a href="index.php?option=transaction&action=get">Get transaction</a></td>
                 <td><a href="index.php?option=transaction&action=getall">Get all transactions</a></td>

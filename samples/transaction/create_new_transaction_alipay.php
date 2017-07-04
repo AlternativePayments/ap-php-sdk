@@ -2,18 +2,18 @@
 
 $customer = new \AlternativePayments\Model\Customer();
 $customer->setEmail("john.doe@example.com");
-$customer->setCountry("BE");
+$customer->setCountry("CN");
 $customer->setFirstName("John");
 $customer->setLastName("Doe");
 
 $payment = new \AlternativePayments\Model\Payment();
-$payment->setPaymentOption("MisterCash");
+$payment->setPaymentOption("AliPay");
 $payment->setHolder("John Doe");
 
 $transaction = new \AlternativePayments\Model\Transaction();
 $transaction->setCustomer($customer);
 $transaction->setPayment($payment);
-$transaction->setAmount(3500);
+$transaction->setAmount(4500);
 $transaction->setCurrency("EUR");
 $transaction->setIPAddress("127.0.0.1");
 

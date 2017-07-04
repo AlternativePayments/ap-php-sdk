@@ -10,13 +10,18 @@ $customer->setAddress2("1040");
 $customer->setCity("Manaus");
 $customer->setState("AM");
 $customer->setZip("69050-240");
-$customer->setPhone("+5566711111");
-$customer->setBirthDate("10/10/1974");
+$customer->setPhone("+5522711111");
+$customer->setBirthDate("02/05/1974");
 
 $payment = new \AlternativePayments\Model\Payment();
-$payment->setPaymentOption("BrazilPayBoleto");
+$payment->setPaymentOption("BrazilPayChargeCard");
 $payment->setHolder("Roberto Doe");
 $payment->setDocumentId("924.521.873-24");
+$payment->setCreditCardNumber("4111111111111111");
+$payment->setCVV2("123");
+$payment->setExpirationMonth("12");
+$payment->setExpirationYear("2018");
+$payment->setCreditCardType("visa");
 
 $transaction = new \AlternativePayments\Model\Transaction();
 $transaction->setCustomer($customer);

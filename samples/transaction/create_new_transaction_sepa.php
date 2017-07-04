@@ -1,7 +1,7 @@
 <?php
 
 $customer = new \AlternativePayments\Model\Customer();
-$customer->setEmail("john.doe@example.com");
+$customer->setEmail("john.doe@gmail.com");
 $customer->setCountry("DE");
 $customer->setFirstName("John");
 $customer->setLastName("Doe");
@@ -9,11 +9,16 @@ $customer->setLastName("Doe");
 $payment = new \AlternativePayments\Model\Payment();
 $payment->setPaymentOption("SEPA");
 $payment->setHolder("John Doe");
-$payment->setIBAN("DEST1000200030004000500");
+$payment->setIBAN("DE89370400440532013000");
+
+$phoneVerification = new \AlternativePayments\Model\TokenSms();
+$phoneVerification->setToken("cac2fc997f5348f19e967d6e2cc3ec28");
+$phoneVerification->setPin("1234");
 
 $transaction = new \AlternativePayments\Model\Transaction();
 $transaction->setCustomer($customer);
 $transaction->setPayment($payment);
+$transaction->setPhoneVerification($phoneVerification);
 $transaction->setAmount(4500);
 $transaction->setCurrency("EUR");
 $transaction->setDescription("test sepa php sdk");

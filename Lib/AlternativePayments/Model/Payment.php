@@ -39,7 +39,6 @@ class Payment extends Element
      * @var string
      */
     protected $creditCardNumber;
-    
     /*
      * @var string
      */
@@ -49,7 +48,6 @@ class Payment extends Element
      * @var string
      */
     protected $expirationYear;
-    
     /*
      * @var string
      */
@@ -59,7 +57,10 @@ class Payment extends Element
      * @var string
      */
     protected $documentId;
-    
+    /*
+     * @var string
+     */
+    protected $creditCardType;
     /*
      * @var string
      */
@@ -211,7 +212,20 @@ class Payment extends Element
     {
         $this->expirationYear = $expirationYear;
     }
-    
+    /*
+     * @param string
+     */
+    public function setCreditCardType($creditCardType)
+    {
+        $this->creditCardType = $creditCardType;
+    }
+    /*
+     * @param string
+     */
+    public function getCreditCardType($creditCardType)
+    {
+        return $this->creditCardType;
+    }
     /*
      * @param string
      */

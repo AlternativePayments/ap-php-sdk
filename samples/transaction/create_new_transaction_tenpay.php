@@ -1,22 +1,14 @@
 <?php
 
 $customer = new \AlternativePayments\Model\Customer();
-$customer->setEmail("Roberto@Doe.com");
-$customer->setCountry("BR");
-$customer->setFirstName("Roberto");
+$customer->setEmail("john.doe@example.com");
+$customer->setCountry("CN");
+$customer->setFirstName("John");
 $customer->setLastName("Doe");
-$customer->setAddress("Av Max Teixeira");
-$customer->setAddress2("1040");
-$customer->setCity("Manaus");
-$customer->setState("AM");
-$customer->setZip("69050-240");
-$customer->setPhone("+5566711111");
-$customer->setBirthDate("10/10/1974");
 
 $payment = new \AlternativePayments\Model\Payment();
-$payment->setPaymentOption("BrazilPayBoleto");
-$payment->setHolder("Roberto Doe");
-$payment->setDocumentId("924.521.873-24");
+$payment->setPaymentOption("TenPay");
+$payment->setHolder("John Doe");
 
 $transaction = new \AlternativePayments\Model\Transaction();
 $transaction->setCustomer($customer);

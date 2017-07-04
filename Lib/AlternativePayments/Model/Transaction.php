@@ -9,7 +9,13 @@ class Transaction extends Element
      * @var \AlternativePayments\Model\Customer
      */
     protected $customer;
-
+    
+    
+    /*
+     * @var integer
+     */
+    protected $pin;
+    
     /*
      * @var \AlternativePayments\Model\Payment
      */
@@ -40,7 +46,7 @@ class Transaction extends Element
      */
     protected $merchantPassThruData;
 	
-	/*
+    /*
      * @var string
      */
     protected $merchantTransactionId;
@@ -125,6 +131,7 @@ class Transaction extends Element
     {
         return $this->amount;
     }
+    
     /*
      * @param integer
      */
@@ -172,6 +179,7 @@ class Transaction extends Element
     {
         return $this->phoneVerification;
     }
+    
     /*
      * @param \AlternativePayments\Model\PhoneVerification
      */
@@ -187,6 +195,7 @@ class Transaction extends Element
     {
         $this->merchantPassThruData = $merchantPassThruData;
     }
+    
     /*
      * @return string
      */
@@ -195,13 +204,14 @@ class Transaction extends Element
         return $this->merchantPassThruData;
     }
 	
-	/*
+    /*
      * @param string
      */
     public function setMerchantTransactionId($merchantTransactionId)
     {
         $this->merchantTransactionId = $merchantTransactionId;
     }
+    
     /*
      * @return string
      */
@@ -229,7 +239,7 @@ class Transaction extends Element
     /*
      * @param string
      */
-    public function setIpAddress($ipAddress)
+    public function setIPAddress($ipAddress)
     {
         $this->ipAddress = $ipAddress;
     }
@@ -237,7 +247,7 @@ class Transaction extends Element
     /*
      * @return string
      */
-    public function getIpAddress()
+    public function getIPAddress()
     {
         return $this->ipAddress;
     }
@@ -289,6 +299,21 @@ class Transaction extends Element
     {
         $this->initialTransactionId = $initialTransactionId;
     }
-
+    
+    /*
+     * @param integer
+     */
+    public function getPin()
+    {
+        return $this->pin;
+    }
+    
+    /*
+     * @return integer
+     */
+    public function setPin($pin)
+    {
+        $this->pin = $pin;
+    }
 
 }

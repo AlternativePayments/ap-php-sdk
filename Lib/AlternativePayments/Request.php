@@ -8,7 +8,7 @@ use AlternativePayments\Error\PaymentException;
 use AlternativePayments\Error\InvalidParameterException;
 
 /**
- * Abstract Service class inherented by all services
+ * Abstract Service class inherited by all services
  */
 class Request
 {
@@ -151,6 +151,7 @@ class Request
         $curl = curl_init($url);
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($curl, CURLOPT_POSTFIELDS, $param);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_HTTPHEADER, array(
             'Content-Type: application/json',
