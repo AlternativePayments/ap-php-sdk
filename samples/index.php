@@ -3,7 +3,7 @@
 require_once '../vendor/autoload.php';
 
 use AlternativePayments\Config;
-Config :: setApiKey("sk_test_6JUp47GK9lWJ7bSZvDC1UBgFIv2aWxxxxx");
+Config :: setApiKey("sk_test_jQdgJUtHeOnGCxxxxxxxxxxxx");
 Config :: setApiUrl("https://api.alternativepayments.com/api");
 
 ?>
@@ -51,6 +51,8 @@ Config :: setApiUrl("https://api.alternativepayments.com/api");
                             <td><a href="index.php?option=transaction&action=create_new_transaction_alipay">Create AliPay transaction</a></td></tr>
                         <tr>
                             <td><a href="index.php?option=transaction&action=create_new_transaction_tenpay">Create TenPay transaction</a></td></tr>
+                        <tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_mcoinz">Create mCoinz transaction</a></td></tr>
                         <tr>
                             <td><a href="index.php?option=transaction&action=create_new_transaction_unionpay">Create UnionPay transaction</a></td></tr>
                         <tr>

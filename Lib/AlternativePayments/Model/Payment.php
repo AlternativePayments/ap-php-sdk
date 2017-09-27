@@ -73,6 +73,11 @@ class Payment extends Element
     /*
      * @return string
      */
+    protected $pinCode;
+    
+    /*
+     * @return string
+     */
     public function getToken()
     {
         return $this->token;
@@ -276,5 +281,21 @@ class Payment extends Element
     public function setBankCode($bankCode)
     {
         $this->bankCode = $bankCode;
+    }
+    
+        /*
+     * @return string
+     */
+    public function getPinCode()
+    {
+        return $this->pinCode;
+    }
+    
+    /*
+     * @param string
+     */
+    public function setPinCode($pinCode)
+    {
+        $this->pinCode = $pinCode;
     }
 }
