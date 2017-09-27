@@ -1,0 +1,22 @@
+{
+    "name": "alternativepayments/alternativepayments",
+    "description": "Official PHP SDK for Alternative Payments API",
+    "homepage": "http://www.alternativepayments.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alternative Payments Inc.",
+            "email": "dev@alternativepayments.com",
+            "homepage": "http://www.alternativepayments.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "AlternativePayments": "Lib/"
+        }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "ext-curl": "*"
+    }
+}
