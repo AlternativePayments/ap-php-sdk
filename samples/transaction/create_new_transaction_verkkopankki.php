@@ -1,29 +1,21 @@
 <?php
 
 $customer = new \AlternativePayments\Model\Customer();
-$customer->setEmail("Roberto@Doe.com");
-$customer->setCountry("BR");
-$customer->setFirstName("Roberto");
+$customer->setEmail("john.doe@example.com");
+$customer->setCountry("FI");
+$customer->setFirstName("John");
 $customer->setLastName("Doe");
-$customer->setAddress("Av Max Teixeira");
-$customer->setAddress2("1040");
-$customer->setCity("Manaus");
-$customer->setState("AM");
-$customer->setZip("69050-240");
-$customer->setPhone("+5566711111");
-$customer->setBirthDate("10/10/1974");
 
 $payment = new \AlternativePayments\Model\Payment();
-$payment->setPaymentOption("BrazilPayBoleto");
-$payment->setHolder("Roberto Doe");
-$payment->setDocumentId("924.521.873-24");
+$payment->setPaymentOption("verkkopankki");
+$payment->setHolder("John Doe");
 
 $transaction = new \AlternativePayments\Model\Transaction();
 $transaction->setCustomer($customer);
 $transaction->setPayment($payment);
 $transaction->setAmount(4500);
 $transaction->setCurrency("EUR");
-$transaction->setIPAddress("127.0.0.1");
+$transaction->setIPAddress("227.100.15.72");
 
 $redirectUrls = new AlternativePayments\Model\RedirectUrls();
 $redirectUrls->setReturnUrl("http://plugins.alternativepayments.com/message/success.html");
@@ -33,3 +25,4 @@ $transaction->setRedirectUrls($redirectUrls);
 $res = \AlternativePayments\Transaction :: post($transaction);
 
 var_dump($res);
+

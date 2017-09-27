@@ -42,6 +42,7 @@ class Refund extends Element
     {
         return $this->amount;
     }
+    
     /*
      * @param integer
      */
@@ -72,7 +73,10 @@ class Refund extends Element
     {
         return $this->reason;
     }
-
+    
+    /*
+     * @param string
+     */
     public function setReason($reason)
     {
         $this->reason = $reason;
@@ -85,6 +89,7 @@ class Refund extends Element
     {
         return $this->originalTransactionCode;
     }
+    
     /*
      * @param string
      */
@@ -103,7 +108,7 @@ class Refund extends Element
     /*
      * @param string
      */
-    public function setCretaed($created)
+    public function setCreated($created)
     {
         $this->created = $created;
     }
@@ -115,6 +120,7 @@ class Refund extends Element
     {
         return $this->requestIp;
     }
+    
     /*
      * @param string
      */

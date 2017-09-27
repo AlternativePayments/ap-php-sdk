@@ -3,7 +3,7 @@
 namespace AlternativePayments\Error;
 
 /**
- * Abstract Error class inherented by all specific error classes
+ * Abstract Error class inherited by all specific error classes
  */
 abstract class ExceptionBase extends \Exception
 {

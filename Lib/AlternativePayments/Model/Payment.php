@@ -63,7 +63,17 @@ class Payment extends Element
     /*
      * @var string
      */
+    protected $creditCardType;
+    
+    /*
+     * @var string
+     */
     protected $bankCode;
+    
+    /*
+     * @return string
+     */
+    protected $pinCode;
     
     /*
      * @return string
@@ -104,6 +114,7 @@ class Payment extends Element
     {
         return $this->paymentOption;
     }
+    
     /*
      * @param string
      */
@@ -111,6 +122,7 @@ class Payment extends Element
     {
         $this->paymentOption = $paymentOption;
     }
+    
     /*
      * @return string
      */
@@ -118,6 +130,7 @@ class Payment extends Element
     {
         return $this->holder;
     }
+    
     /*
      * @param string
      */
@@ -125,6 +138,7 @@ class Payment extends Element
     {
         $this->holder = $holder;
     }
+    
     /*
      * @return string
      */
@@ -132,6 +146,7 @@ class Payment extends Element
     {
         return $this->IBAN;
     }
+    
     /*
      * @param string
      */
@@ -215,6 +230,22 @@ class Payment extends Element
     /*
      * @param string
      */
+    public function setCreditCardType($creditCardType)
+    {
+        $this->creditCardType = $creditCardType;
+    }
+    
+    /*
+     * @param string
+     */
+    public function getCreditCardType()
+    {
+        return $this->creditCardType;
+    }
+    
+    /*
+     * @param string
+     */
     public function setCVV2($cVV2)
     {
         $this->cVV2 = $cVV2;
@@ -250,5 +281,21 @@ class Payment extends Element
     public function setBankCode($bankCode)
     {
         $this->bankCode = $bankCode;
+    }
+    
+        /*
+     * @return string
+     */
+    public function getPinCode()
+    {
+        return $this->pinCode;
+    }
+    
+    /*
+     * @param string
+     */
+    public function setPinCode($pinCode)
+    {
+        $this->pinCode = $pinCode;
     }
 }
