@@ -1,25 +1,26 @@
 <?php
 
 $customer = new \AlternativePayments\Model\Customer();
-$customer->setEmail("john.doe@example.com");
-$customer->setCountry("EG");
 $customer->setFirstName("John");
 $customer->setLastName("Doe");
+$customer->setEmail("john.doe@example.com");
+$customer->setCountry("EG");
+
 
 $payment = new \AlternativePayments\Model\Payment();
-$payment->setPaymentOption("cashu");
+$payment->setPaymentOption("CashU");
 $payment->setHolder("John Doe");
 
 $transaction = new \AlternativePayments\Model\Transaction();
 $transaction->setCustomer($customer);
 $transaction->setPayment($payment);
-$transaction->setAmount(4500);
+$transaction->setAmount(1000);
 $transaction->setCurrency("EUR");
-$transaction->setIPAddress("227.100.15.72");
+$transaction->setIPAddress("127.0.0.1");
 
 $redirectUrls = new AlternativePayments\Model\RedirectUrls();
-$redirectUrls->setReturnUrl("http://plugins.alternativepayments.com/message/success.html");
-$redirectUrls->setCancelUrl("http://plugins.alternativepayments.com/message/failure.html");
+$redirectUrls->setReturnUrl("http://alternativepayments.com/message/success.html");
+$redirectUrls->setCancelUrl("http://alternativepayments.com/message/failure.html");
 $transaction->setRedirectUrls($redirectUrls);
 
 $res = \AlternativePayments\Transaction :: post($transaction);

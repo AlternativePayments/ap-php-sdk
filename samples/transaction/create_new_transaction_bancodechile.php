@@ -4,17 +4,19 @@ $customer = new \AlternativePayments\Model\Customer();
 $customer->setFirstName("John");
 $customer->setLastName("Doe");
 $customer->setEmail("john@doe.com");
-$customer->setCountry("ES");
+$customer->setCountry("CL");
+$customer->setBirthDate("02/15/1968");
 
 $payment = new \AlternativePayments\Model\Payment();
-$payment->setPaymentOption("Teleingreso");
+$payment->setPaymentOption("BancoDeChile");
 $payment->setHolder("John Doe");
+$payment->setDocumentID("1111111111111111");
 
 $transaction = new \AlternativePayments\Model\Transaction();
 $transaction->setCustomer($customer);
 $transaction->setPayment($payment);
 $transaction->setAmount(1000);
-$transaction->setCurrency("EUR");
+$transaction->setCurrency("USD");
 $transaction->setIPAddress("127.0.0.1");
 
 $redirectUrls = new AlternativePayments\Model\RedirectUrls();

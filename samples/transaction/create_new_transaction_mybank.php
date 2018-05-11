@@ -4,10 +4,10 @@ $customer = new \AlternativePayments\Model\Customer();
 $customer->setFirstName("John");
 $customer->setLastName("Doe");
 $customer->setEmail("john@doe.com");
-$customer->setCountry("ES");
+$customer->setCountry("IT");
 
 $payment = new \AlternativePayments\Model\Payment();
-$payment->setPaymentOption("Teleingreso");
+$payment->setPaymentOption("MyBank");
 $payment->setHolder("John Doe");
 
 $transaction = new \AlternativePayments\Model\Transaction();
@@ -25,3 +25,4 @@ $transaction->setRedirectUrls($redirectUrls);
 $res = \AlternativePayments\Transaction :: post($transaction);
 
 var_dump($res);
+

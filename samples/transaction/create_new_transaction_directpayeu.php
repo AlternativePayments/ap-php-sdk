@@ -4,10 +4,11 @@ $customer = new \AlternativePayments\Model\Customer();
 $customer->setFirstName("John");
 $customer->setLastName("Doe");
 $customer->setEmail("john@doe.com");
-$customer->setCountry("ES");
+$customer->setCountry("DE");
+
 
 $payment = new \AlternativePayments\Model\Payment();
-$payment->setPaymentOption("Teleingreso");
+$payment->setPaymentOption("DirectPayEU");
 $payment->setHolder("John Doe");
 
 $transaction = new \AlternativePayments\Model\Transaction();

@@ -31,28 +31,42 @@ Config :: setApiUrl("https://api.alternativepayments.com/api");
                             <td><a href="index.php?option=transaction&action=create_new_subscription_sepa">Create Subscription SEPA</a></td></tr>
                         <tr>
                             <td><a href="index.php?option=transaction&action=create_new_transaction_sepa">Create SEPA transaction</a></td></tr>
+						<tr>
+							<td><a href="index.php?option=transaction&action=create_new_transaction_bancodechile">Create BancoDeChile transaction</a></td></tr>
+						<tr>
+							<td><a href="index.php?option=transaction&action=create_new_transaction_bancodeoccidente"> Create BancoDeOccidente transaction</a></td></tr>
+						<tr>
+							<td><a href="index.php?option=transaction&action=create_new_transaction_bancodobrasil"> Create BancoDoBrasil transaction</a></td></tr>
                         <tr>
                             <td><a href="index.php?option=transaction&action=create_new_transaction_brazilpayboleto">Create BrazilPayBoleto transaction</a></td></tr>
                         <tr>
                             <td><a href="index.php?option=transaction&action=create_new_transaction_brazilpaybanktransfer">Create BrazilPayBankTransfer transaction</a></td></tr>
                         <tr>
                             <td><a href="index.php?option=transaction&action=create_new_transaction_brazilpaychargecard">Create BrazilPayChargeCard transaction</a></td></tr>
+						<tr>
+							<td><a href="index.php?option=transaction&action=create_new_transaction_banamex">Create Banamex Transaction</a></td></tr>
                         <tr>
-                            <td><a href="index.php?option=transaction&action=create_new_transaction_cashu">Create Cashu transaction</a></td></tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_argencard">Create ArgenCard transaction</a></td></tr>
                         <tr>
+                            <td><a href="index.php?option=transaction&action=create_new_transaction_cashu">Create CashU transaction</a></td></tr>
+						<tr>
+							<td><a href="index.php?option=transaction&action=create_new_transaction_directpayeu">Create DirectPayEU Transaction</a></td><tr>
+						<tr>               
                             <td><a href="index.php?option=transaction&action=create_new_transaction_teleingreso">Create Teleingreso transaction</a></td></tr>
                         <tr>
                             <td><a href="index.php?option=transaction&action=create_new_transaction_safetypay">Create SafetyPay transaction</a></td></tr>
                         <tr>
                             <td><a href="index.php?option=transaction&action=create_new_transaction_sofort">Create Sofort transaction</a></td></tr>
                         <tr>
-                            <td><a href="index.php?option=transaction&action=create_new_transaction_paysafe">Create PaySafe transaction</a></td></tr>
-                        <tr>
                             <td><a href="index.php?option=transaction&action=create_new_transaction_alipay">Create AliPay transaction</a></td></tr>
                         <tr>
                             <td><a href="index.php?option=transaction&action=create_new_transaction_tenpay">Create TenPay transaction</a></td></tr>
                         <tr>
                             <td><a href="index.php?option=transaction&action=create_new_transaction_mcoinz">Create mCoinz transaction</a></td></tr>
+						<tr>
+							<td><a href="index.php?option=transaction&action=create_new_transaction_mybank">Create MyBank transaction</a></td></tr>	
+						<tr>
+							<td><a href="index.php?option=transaction&action=create_new_transaction_paysafe">Create PaySafe transaction</a></td></tr>
                         <tr>
                             <td><a href="index.php?option=transaction&action=create_new_transaction_unionpay">Create UnionPay transaction</a></td></tr>
                         <tr>
@@ -71,6 +85,7 @@ Config :: setApiUrl("https://api.alternativepayments.com/api");
                             <td><a href="index.php?option=transaction&action=create_new_transaction_przelewy24">Create Przelewy24 transaction</a></td></tr>
                         <tr>
                             <td><a href="index.php?option=transaction&action=create_new_transaction_qiwi">Create Qiwi transaction</a></td></tr>
+						<tr>                     
                     </table></td>
                 <td><a href="index.php?option=transaction&action=get">Get transaction</a></td>
                 <td><a href="index.php?option=transaction&action=getall">Get all transactions</a></td>
