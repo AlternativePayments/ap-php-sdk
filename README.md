@@ -19,16 +19,16 @@ composer require alternativepayments/alternativepayments
 ```
 ## Usage
 To load the Alternative Payments PHP SDK you have to include autoloader:
-```
+```php
 require_once '/path/to/your-project/vendor/autoload.php';
 ```
 To use Alternative Payments PHP SDK you need to setup your secret integration key:
-```
+```php
 use AlternativePayments\Config;
 Config :: setApiKey("sk_test_rHErfsdjgfk9.....lFbfdsgh3mv0M");
 ```
 SEPA transaction request example:
-```
+```php
 require_once '../vendor/autoload.php';
 
 use AlternativePayments\Config;
