@@ -8,7 +8,7 @@ use AlternativePayments\Error\PaymentException;
 use AlternativePayments\Error\InvalidParameterException;
 
 /**
- * Abstract Service class inherited by all services
+ * Abstract Service class inherented by all services
  */
 class Request
 {
@@ -139,8 +139,23 @@ class Request
      */
     protected function curlRequest($ctrl, $method, $param)
     {
+        $file_path = realpath(dirname(__FILE__)) . '/../../request.log';
+        $log = array();
+        
+        
+        $log['date'] = date('d.m.Y H:i:s');
+        $log['$ctrl'] = $ctrl;
+        $log['$method'] = $method;
+        $log['$param'] = $param;
+        
+        
         $url = \AlternativePayments\Config::getApiUrl()."/".$ctrl;
         $key = \AlternativePayments\Config::getApiKey();
+        
+        $log['$url'] = $url;
+        $log['$key'] = $key;
+        
+        
         if ($key == null) {
             throw new ApiException("API Key not defined.");
         }
@@ -148,10 +163,24 @@ class Request
         if ($method == "GET" && ($param != null && $param != "")) {
             $url = $url."/".$param;
         }
-        $curl = curl_init($url);
+        
+        
+        $log['$encodedKey'] = $encodedKey;
+        $log['$url'] = $url;
+        
+        
+        $current = file_get_contents($file_path);
+        $log = json_encode($log);
+        $current .= $log . "\n";
+        file_put_contents($file_path, $current);
+        
+        
+         $curl = curl_init($url);
+         /* Begin windows ssl line. This next line is for windows ssl. remove if not on windows using ssl */
+        curl_setopt($curl, CURLOPT_CAINFO, 'C:\Program Files (x86)\PHP\v5.6\extras\ssl\curl-ca-bundle.crt');
+        /* end windows using ssl */
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($curl, CURLOPT_POSTFIELDS, $param);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_HTTPHEADER, array(
             'Content-Type: application/json',
@@ -160,13 +189,23 @@ class Request
             'Authorization: Basic ' . $encodedKey
             )
         );
+        
         $result = curl_exec($curl);
+        
+        $temp['$result'] = $result;
+        
+        $current = file_get_contents($file_path);
+        $log = json_encode($temp);
+        $current .= $log . "\n";
+        file_put_contents($file_path, $current);
+        
+        
         if (!$result) {
             throw new ApiException("Connection Error - Invalid URL");
         }
-        
         $this->parseResponse(curl_getinfo($curl), $result);
         curl_close($curl);
+        
         return $result;
     }
     

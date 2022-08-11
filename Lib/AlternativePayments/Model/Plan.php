@@ -8,12 +8,7 @@ class Plan extends Element
     /*
      * @var string
      */
-    protected $name;
-    
-    /*
-     * @var string
-     */
-    protected $description;
+    protected $merchantIdentification;
 
     /*
      * @var integer
@@ -24,69 +19,63 @@ class Plan extends Element
      * @var string
      */
     protected $currency;
-    
+
+    /*
+     * @var integer
+     */
+    protected $period;
+
+    /*
+     * @var integer
+     */
+    protected $interval;
+
+    /*
+     * @var integer
+     */
+    protected $recurTimes;
+
+    /*
+     * @var integer
+     */
+    protected $trialDays;
+
+    /*
+     * @var integer
+     */
+    protected $discountAmount;
+
+    /*
+     * @var integer
+     */
+    protected $discountRecurTimes;
+
     /*
      * @var string
      */
-    protected $intervalUnit;
-    
-    /*
-     * @var integer
-     */
-    protected $intervalCount;
-    
-    /*
-     * @var integer
-     */
-    protected $billingCycles;
-    
+    protected $name;
+
     /*
      * @var string
      */
-    protected $isConversionRateFixed;
-    
-    /*
-     * @var integer
-     */
-    protected $ipAddress;
-    
-    /*
-     * @var integer
-     */
-    protected $trialPeriod;
-    
+    protected $description;
+
+
     /*
      * @return string
      */
-    public function getName()
+    public function getMerchantIdentification()
     {
-        return $this->name;
+        return $this->merchantIdentification;
     }
-    
     /*
-     * @return string
+     * @param string
      */
-    public function setName($name)
+    public function setMerchantIdentification($merchantIdentification)
     {
-        $this->name = $name;
+        $this->merchantIdentification = $merchantIdentification;
     }
-    
-    /*
-     * @return integer
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-    
-    /*
-     * @return integer
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-    }
-    
+
     /*
      * @return integer
      */
@@ -94,7 +83,6 @@ class Plan extends Element
     {
         return $this->amount;
     }
-    
     /*
      * @param integer
      */
@@ -102,116 +90,140 @@ class Plan extends Element
     {
         $this->amount = $amount;
     }
-    
+
+
     /*
-     * @return integer
+     * @return string
      */
     public function getCurrency()
     {
         return $this->currency;
     }
-    
     /*
-     * @return integer
+     * @param string
      */
     public function setCurrency($currency)
     {
         $this->currency = $currency;
     }
-    
+
     /*
      * @return integer
      */
-    public function getintervalUnit()
+    public function getPeriod()
     {
-        return $this->intervalUnit;
+        return $this->period;
     }
-    
     /*
-     * @return integer
+     * @param integer
      */
-    public function setIntervalUnit($intervalUnit)
+    public function setPeriod($period)
     {
-        $this->intervalUnit = $intervalUnit;
+        $this->period = $period;
     }
-    
+
     /*
      * @return integer
      */
-    public function getIntervalCount($intervalCount)
+    public function getInterval()
     {
-        return $this->intervalCount;
+        return $this->interval;
     }
-    
     /*
-     * @return integer
+     * @param integer
      */
-    public function setIntervalCount($intervalCount)
+    public function setInterval($interval)
     {
-        $this->intervalCount = $intervalCount;
+        $this->interval = $interval;
     }
-    
+
     /*
      * @return integer
      */
-    public function getBillingCycle()
+    public function getRecurTimes()
     {
-        return $this->billingCycles;
+        return $this->recurTimes;
     }
-    
     /*
-     * @return integer
+     * @param integer
      */
-    public function setBillingCycle($billingCycle)
+    public function setRecurTimes($recurTimes)
     {
-        $this->billingCycles = $billingCycle;
+        $this->recurTimes = $recurTimes;
     }
-    
+
     /*
      * @return integer
      */
-    public function getIsConversionRateFixed()
+    public function getTrialDays()
     {
-        return $this->isConversionRateFixed;
+        return $this->trialDays;
     }
-    
     /*
-     * @return integer
+     * @param integer
      */
-    public function setIsConversionRateFixed($isConversionRateFixed)
+    public function setTrialDays($trialDays)
     {
-        $this->isConversionRateFixed = $isConversionRateFixed;
+        $this->trialDays = $trialDays;
     }
-    
+
     /*
      * @return integer
      */
-    public function getIpAddress($ipAddress)
+    public function getDiscountAmount()
     {
-        return $ipAddress->ipAddress;
+        return $this->discountAmount;
     }
-    
     /*
-     * @return integer
+     * @param integer
      */
-    public function setIpAddress($ipAddress)
+    public function setDiscountAmount($discountAmount)
     {
-        $this->ipAddress = $ipAddress;
+        $this->discountAmount = $discountAmount;
     }
-    
+
     /*
      * @return integer
      */
-    public function getTrialPeriod()
+    public function getDiscountRecurTimes()
     {
-        return $this->trialPeriod;
+        return $this->discountRecurTimes;
     }
-    
     /*
-     * @return integer
+     * @param integer
      */
-    public function setTrialPeriod($trialPeriod)
+    public function setDiscountRecurTimes($discountRecurTimes)
     {
-        $this->trialPeriod = $trialPeriod;
+        $this->discountRecurTimes = $discountRecurTimes;
+    }
+
+    /*
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+    /*
+     * @param string
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    /*
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+    /*
+     * @param string
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
     }
 }

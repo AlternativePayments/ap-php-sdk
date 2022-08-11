@@ -3,7 +3,7 @@
 namespace AlternativePayments\Model;
 
 /**
- * Abstract Model class inherited by all model classes
+ * Abstract Model class inherented by all model classes
  */
 abstract class Element
 {
@@ -22,6 +22,27 @@ abstract class Element
      * @var string
      */
     protected $updated;
+
+    /*
+     * @var string
+     */
+    protected $version;
+
+    /*
+     * @return string
+     */
+    public function __construct()
+    {
+        $this->version = "1.0.1";
+    }
+
+    /*
+     * @return string
+     */
+    public function getVersion()
+    {
+        return $this->version;
+    }
 
     /*
      * @return string
